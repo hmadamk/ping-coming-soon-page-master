@@ -1,0 +1,151 @@
+:root{
+    --Blue: hsl(223, 87%, 63%);
+    
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+.container{
+    width:min(90vw,1200px);
+    margin: auto;
+}
+header{
+    text-align: center;
+}
+header h1{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+header .soon{
+    font-size: 2rem;
+    color: var(--Gray);
+    margin-bottom: 0rem;
+}
+header .soon span{
+    color:var(--Very-Dark-Blue);
+    font-weight: 700;
+}
+header form h4{
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 3rem;
+}
+header form div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header input[type="email"]{
+    padding: 1.3em;
+    padding-left: 2rem;
+    border-radius: 40px;
+    border:2px solid var(--Blue);
+    outline: none;
+    width:min(70%,400px);
+    opacity: .3;
+    margin-bottom: 1rem;
+}
+header input[type="submit"]{
+    padding: 1.3em;
+    border-radius: 40px;
+    border:none;
+    color:#fff;
+    background-color: var(--Blue);
+    outline: none;
+    width:min(70%,400px);
+    margin-bottom: 5rem;
+    box-shadow: 4px 10px 20px -10px var(--Blue);
+    cursor: pointer;
+}
+header input[type="email"]:focus,
+header input[type="email"]:active{
+    opacity: 1;
+}
+::placeholder {
+    color: var(--Blue);
+    opacity: 1; /* Firefox */
+} 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: var(--Blue);
+}  
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: var(--Blue);
+}
+header form div{
+    position: relative;
+}
+header form div.active::after{
+    display: block;
+}
+header form div.active input[type="email"]{
+    border-color: var(--Light-Red);
+}
+header form div::after{
+    content: "Please provide a valid email adress";
+    display: none;
+    position:absolute;
+    color:var(--Light-Red);
+	font-size:12px;
+	position:absolute;
+	left:2rem;
+	top:60px;
+    font-weight: 600;
+    opacity: .7;
+}
+main{
+    margin-bottom: 10rem;
+}
+main img{
+    display: block;
+    width: 100%;
+}
+footer{
+    text-align: center;
+}
+footer span{
+    display: inline-block;
+    padding:10px 10px 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    border:1px solid var(--Pale-Blue);
+    margin-inline:5px;
+}
+footer img{
+    width:25px;
+    aspect-ratio: 1/1;
+}
+footer p{
+    color:var(--Gray);
+    margin-top: 2rem;
+    font-size: 16px;
+}
+@media (min-width:770px){
+    
+    header form div{
+        flex-direction: row;
+        margin: auto;
+        margin-bottom: 5rem;
+        width: 80%;  
+    }
+    header input[type="submit"],
+    header input[type="email"]{
+        margin:0;
+    }
+    header input[type="email"]{
+        flex:2;
+    }
+    header input[type="submit"]{
+        flex:1;
+        margin-left: 10px;
+    }
+}
