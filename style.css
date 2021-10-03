@@ -15,7 +15,7 @@ body{
     font-family: 'Libre Franklin', sans-serif;
 }
 .container{
-    width:min(90vw,1200px);
+    width:min(90vw,1000px);
     margin: auto;
 }
 header{
@@ -26,7 +26,7 @@ header h1{
     margin-bottom: 3rem;
 }
 header .soon{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--Gray);
     margin-bottom: 0rem;
 }
@@ -34,7 +34,7 @@ header .soon span{
     color:var(--Very-Dark-Blue);
     font-weight: 700;
 }
-header form h4{
+header form h2{
     font-weight: 400;
     font-size: 18px;
     margin-bottom: 3rem;
@@ -107,7 +107,8 @@ main{
 }
 main img{
     display: block;
-    width: 100%;
+    width: min(100%,900px);
+	margin-inline:auto;
 }
 footer{
     text-align: center;
